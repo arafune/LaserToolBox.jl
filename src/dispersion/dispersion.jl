@@ -9,6 +9,11 @@ export beta_n
 
 
 Group Velocity Dispersion (GVD) in [fs²/μm]
+
+# Example
+```julia
+gvd(n.alpha_bbo_o, 0.8; unit=:mm)  # GVD in fs^2/mm
+```
 """
 function gvd(model, λ; unit = :mm)
     beta_n(model, λ; order = 2, unit)
@@ -19,6 +24,10 @@ end
   `tod`(model, λ; unit = :mm)
 
 Third-Order Dispersion (TOD) in [fs³/μm]
+# Example
+```julia
+tod(n.sf11, 0.8; unit=:mm)  # TOD in fs^3/mm
+```
 """
 function tod(model, λ; unit = :mm)
     beta_n(model, λ; order = 3, unit)

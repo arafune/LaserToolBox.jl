@@ -24,7 +24,7 @@ Calculate the n-th order dispersion coefficient (βₙ) recursively for a given 
 
 # Example
 ```julia
-beta_n(n.sf11, 0.8; order=2, unit=:mm)  # GVD in fs^2/mm
+beta_n(n.sf11, 0.8; order=2, unit=:mm)  # TOD in fs^2/mm
 ```
 """
 function beta_n(refractive_index_model, λ; order::Int = 1, unit::Symbol = :mm)
